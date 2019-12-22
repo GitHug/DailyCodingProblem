@@ -14,3 +14,5 @@ const hasSum = (array, k) => {
   }
   return false
 }
+
+module.exports = hasSum
