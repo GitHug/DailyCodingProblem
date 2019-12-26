@@ -11,16 +11,9 @@
  *
  * Implement car and cdr.
  */
-class Pair {
-  constructor(first, last) {
-    this.first = first
-    this.last = last
-  }
-}
+const cons = (a, b) => isFirst => isFirst ? a : b
 
-const cons = (a, b) => new Pair(a, b)
-
-const car = pair => pair.first
-const cdr = pair => pair.last
+const car = pair => pair(true)
+const cdr = pair => pair(false)
 
 module.exports = { car, cdr, cons }
